@@ -1,0 +1,48 @@
+{
+    "name": "unibrick/pauth",
+    "description": "Laravel Passport UI extension with controllers",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Unibrick",
+            "email": "unibricks@yandex.com"
+        }
+    ],
+    "homepage": "https://github.com/unibrick/pauth",
+    "keywords": ["Laravel", "PAuth"],
+    "require": {
+        "laravel/framework": "^10.10",
+        "laravel/socialite": "^5.9",
+        "socialiteproviders/google": "^4.1",
+        "socialiteproviders/laravelpassport": "^4.3",
+        "socialiteproviders/mailru": "^4.1",
+        "socialiteproviders/telegram": "^4.1",
+        "socialiteproviders/vkontakte": "^5.0",
+        "socialiteproviders/yandex": "^4.1"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Unibrick\\PAuth\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Unibrick\\PAuth\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Unibrick\\PAuth\\PAuthServiceProvider"
+            ],
+            "aliases": {
+                "PAuth": "Unibrick\\PAuth\\Facades\\PAuth"
+            }
+        }
+    }
+}
